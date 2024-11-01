@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Резюме замечательного человека <span class="beautiful-font">Непомнящих Алексея Александровича</span></h1>
+    </header>
+    <main>
+        <section>
+            <article class="foto">
+                <img src="me.jpg" width="150" height="150" alt="Фотография Алексея" class="leftimg">
+            </article>
+            <article class="resume">
+                <h1>
+                    <p>
+                            Это очень серьезно резюме описывающее исключительно положительного специалиста,
+                        после прочтения которого у работодателя не останется выбора
+                        кроме как принять на работу этого соискателя
+                    </p>
+                    <p>
+                            Данное резюме подробно показывает что, соискатель обладает всеми необходимыми,
+                        для высокооплачиваемой должности, качествами.
+                    </p>
+                    <p>
+                        Еще какой то текст. Еще какой то текст. Еще какой то текст. Еще какой то текст. Еще какой то текст.
+                    </p>
+                </h1>
+            </article>
+            <article class="name-part-resume">
+                <h2>Наиболее выдающиеся таланты главного героя этого резюме</h2>
+            </article>
+            <h1>Сон</h1>
+            <article class="skill-bar-container">
+                <div class="skill sleep">90%</div>
+            </article>
+            <h1>Прием пищи</h1>
+            <article class="skill-bar-container">
+                <div class="skill eat">60%</div>
+            </article>
+            <h1>Программирование</h1>
+            <article class="skill-bar-container">
+                <div class="skill programming">13%</div>
+            </article>
+            <h1>Прокрастинация</h1>
+            <article class="skill-bar-container">
+                <div class="skill procrastination">97%</div>
+            </article>
+            <article class="name-part-resume">
+                <h2>Летопись жития сего соискателя</h2>
+            </article>
+            <article class="collapse">
+                <button type="button" class="collapsible">Год 2009 от Р.Х.</button>
+                <div class="content">
+                    <p>Закончил учебу</p>
+                </div>
+                <button type="button" class="collapsible">Год 2010 от Р.Х.</button>
+                <div class="content">
+                    <p>Поступил на работу</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <h1 class="beautiful-font">Спешите нанять этого ценного специалиста!</h1>
+        <p>
+            Телефон: 8 999 999 99 99
+        </p>
+        <p>
+            Почта: <a href="mailto:mail@yandex.ru">mail@yandex.ru</a>
+        </p>
+    </footer>
+    <script>
+        let coll = document.getElementsByClassName("collapsible");
+        let i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
